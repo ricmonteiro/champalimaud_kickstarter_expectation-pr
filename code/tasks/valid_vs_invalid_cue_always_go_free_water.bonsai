@@ -617,7 +617,7 @@
                     <Angle>0</Angle>
                     <SpatialFrequency>0.05</SpatialFrequency>
                     <TemporalFrequency>0</TemporalFrequency>
-                    <Phase>-161748.734</Phase>
+                    <Phase>-345170.969</Phase>
                     <SquareWave>false</SquareWave>
                     <Contrast>1</Contrast>
                     <Radius>1</Radius>
@@ -715,7 +715,7 @@
                         </Expression>
                         <Expression xsi:type="LessThan">
                           <Operand xsi:type="FloatProperty">
-                            <Value>85</Value>
+                            <Value>82</Value>
                           </Operand>
                         </Expression>
                         <Expression xsi:type="WorkflowOutput" />
@@ -1093,7 +1093,7 @@
                     <Angle>0</Angle>
                     <SpatialFrequency>0.05</SpatialFrequency>
                     <TemporalFrequency>0</TemporalFrequency>
-                    <Phase>51965.7</Phase>
+                    <Phase>93731.42</Phase>
                     <SquareWave>false</SquareWave>
                     <Contrast>1</Contrast>
                     <Radius>1</Radius>
@@ -1142,8 +1142,8 @@
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="p4:CreateDiscreteUniform">
-                      <p4:Lower>12</p4:Lower>
-                      <p4:Upper>16</p4:Upper>
+                      <p4:Lower>20</p4:Lower>
+                      <p4:Upper>25</p4:Upper>
                     </Combinator>
                   </Expression>
                   <Expression xsi:type="Combinator">
@@ -1226,7 +1226,7 @@
                         </Expression>
                         <Expression xsi:type="LessThan">
                           <Operand xsi:type="FloatProperty">
-                            <Value>14</Value>
+                            <Value>15</Value>
                           </Operand>
                         </Expression>
                         <Expression xsi:type="WorkflowOutput" />
@@ -1359,7 +1359,7 @@
                     <Angle>0</Angle>
                     <SpatialFrequency>0.05</SpatialFrequency>
                     <TemporalFrequency>0</TemporalFrequency>
-                    <Phase>-52720.51</Phase>
+                    <Phase>-113787.016</Phase>
                     <SquareWave>false</SquareWave>
                     <Contrast>1</Contrast>
                     <Radius>1</Radius>
@@ -1390,7 +1390,7 @@
                     <Angle>0</Angle>
                     <SpatialFrequency>0.05</SpatialFrequency>
                     <TemporalFrequency>0</TemporalFrequency>
-                    <Phase>52720.51</Phase>
+                    <Phase>113788.805</Phase>
                     <SquareWave>false</SquareWave>
                     <Contrast>1</Contrast>
                     <Radius>1</Radius>
@@ -1404,8 +1404,8 @@
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="p4:CreateDiscreteUniform">
-                      <p4:Lower>12</p4:Lower>
-                      <p4:Upper>16</p4:Upper>
+                      <p4:Lower>20</p4:Lower>
+                      <p4:Upper>25</p4:Upper>
                     </Combinator>
                   </Expression>
                   <Expression xsi:type="Combinator">
@@ -1530,7 +1530,7 @@
                         </Expression>
                         <Expression xsi:type="LessThan">
                           <Operand xsi:type="FloatProperty">
-                            <Value>13</Value>
+                            <Value>14</Value>
                           </Operand>
                         </Expression>
                         <Expression xsi:type="WorkflowOutput" />
@@ -1925,10 +1925,10 @@
                   <Expression xsi:type="IncludeWorkflow" Path="BonVision:Primitives.DrawGratings.bonsai">
                     <LocationX>-120</LocationX>
                     <LocationY>0</LocationY>
-                    <Angle>-45</Angle>
+                    <Angle>0</Angle>
                     <SpatialFrequency>0.05</SpatialFrequency>
                     <TemporalFrequency>0</TemporalFrequency>
-                    <Phase>-53428.832</Phase>
+                    <Phase>-114550.781</Phase>
                     <SquareWave>false</SquareWave>
                     <Contrast>1</Contrast>
                     <Radius>1</Radius>
@@ -1954,10 +1954,10 @@
                   <Expression xsi:type="IncludeWorkflow" Path="BonVision:Primitives.DrawGratings.bonsai">
                     <LocationX>120</LocationX>
                     <LocationY>0</LocationY>
-                    <Angle>0</Angle>
+                    <Angle>45</Angle>
                     <SpatialFrequency>0.05</SpatialFrequency>
                     <TemporalFrequency>0</TemporalFrequency>
-                    <Phase>53428.832</Phase>
+                    <Phase>114551.68</Phase>
                     <SquareWave>false</SquareWave>
                     <Contrast>1</Contrast>
                     <Radius>1</Radius>
@@ -1971,8 +1971,8 @@
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="p4:CreateDiscreteUniform">
-                      <p4:Lower>12</p4:Lower>
-                      <p4:Upper>16</p4:Upper>
+                      <p4:Lower>20</p4:Lower>
+                      <p4:Upper>25</p4:Upper>
                     </Combinator>
                   </Expression>
                   <Expression xsi:type="Combinator">
@@ -2055,7 +2055,7 @@
                         </Expression>
                         <Expression xsi:type="LessThan">
                           <Operand xsi:type="FloatProperty">
-                            <Value>12</Value>
+                            <Value>13</Value>
                           </Operand>
                         </Expression>
                         <Expression xsi:type="WorkflowOutput" />
@@ -2674,7 +2674,7 @@
             </Expression>
             <Expression xsi:type="GreaterThan">
               <Operand xsi:type="DoubleProperty">
-                <Value>60900</Value>
+                <Value>44000</Value>
               </Operand>
             </Expression>
             <Expression xsi:type="Disable">
@@ -2803,7 +2803,7 @@
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="DoubleProperty">
-                <Value>60900</Value>
+                <Value>44000</Value>
               </Combinator>
             </Expression>
             <Expression xsi:type="PublishSubject">
