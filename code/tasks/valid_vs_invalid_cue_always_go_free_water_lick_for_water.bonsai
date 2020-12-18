@@ -152,7 +152,7 @@
               </PropertyMappings>
             </Expression>
             <Expression xsi:type="io:CsvWriter">
-              <io:FileName>D:\wheel_train\zayin_test_21-10-2020\raw_encoder_signal.csv</io:FileName>
+              <io:FileName>D:\Behavior_data_wheeled_task\\TEST\18-12-2020\raw_encoder_signal.csv</io:FileName>
               <io:Append>true</io:Append>
               <io:Overwrite>true</io:Overwrite>
               <io:Suffix>None</io:Suffix>
@@ -188,7 +188,7 @@
               </PropertyMappings>
             </Expression>
             <Expression xsi:type="io:CsvWriter">
-              <io:FileName>D:\wheel_train\zayin_test_21-10-2020\wheel_hi_res.csv</io:FileName>
+              <io:FileName>D:\Behavior_data_wheeled_task\\TEST\18-12-2020\wheel_hi_res.csv</io:FileName>
               <io:Append>true</io:Append>
               <io:Overwrite>true</io:Overwrite>
               <io:Suffix>None</io:Suffix>
@@ -344,7 +344,7 @@
               </Combinator>
             </Expression>
             <Expression xsi:type="io:CsvWriter">
-              <io:FileName>D:\wheel_train\zayin_test_21-10-2020\abspos.csv</io:FileName>
+              <io:FileName>D:\Behavior_data_wheeled_task\\TEST\18-12-2020\abspos.csv</io:FileName>
               <io:Append>true</io:Append>
               <io:Overwrite>true</io:Overwrite>
               <io:Suffix>None</io:Suffix>
@@ -398,7 +398,7 @@
               <Combinator xsi:type="rx:CombineLatest" />
             </Expression>
             <Expression xsi:type="io:CsvWriter">
-              <io:FileName>D:\wheel_train\zayin_test_21-10-2020\epochlicktimestamp.csv</io:FileName>
+              <io:FileName>D:\Behavior_data_wheeled_task\\TEST\18-12-2020\epochlicktimestamp.csv</io:FileName>
               <io:Append>true</io:Append>
               <io:Overwrite>false</io:Overwrite>
               <io:Suffix>None</io:Suffix>
@@ -580,7 +580,7 @@
                     <Angle>0</Angle>
                     <SpatialFrequency>0.05</SpatialFrequency>
                     <TemporalFrequency>0</TemporalFrequency>
-                    <Phase>-145723.078</Phase>
+                    <Phase>-17855.55</Phase>
                     <SquareWave>false</SquareWave>
                     <Contrast>1</Contrast>
                     <Radius>1</Radius>
@@ -603,6 +603,29 @@
                   </Expression>
                   <Expression xsi:type="BehaviorSubject">
                     <Name>ITI Distance</Name>
+                  </Expression>
+                  <Expression xsi:type="SubscribeSubject">
+                    <Name>Prefix</Name>
+                  </Expression>
+                  <Expression xsi:type="Combinator">
+                    <Combinator xsi:type="StringProperty">
+                      <Value>iti_distance.csv</Value>
+                    </Combinator>
+                  </Expression>
+                  <Expression xsi:type="Combinator">
+                    <Combinator xsi:type="rx:Zip" />
+                  </Expression>
+                  <Expression xsi:type="Add" />
+                  <Expression xsi:type="PropertyMapping">
+                    <PropertyMappings>
+                      <Property Name="FileName" />
+                    </PropertyMappings>
+                  </Expression>
+                  <Expression xsi:type="io:CsvWriter">
+                    <io:Append>true</io:Append>
+                    <io:Overwrite>false</io:Overwrite>
+                    <io:Suffix>None</io:Suffix>
+                    <io:IncludeHeader>false</io:IncludeHeader>
                   </Expression>
                   <Expression xsi:type="SubscribeSubject">
                     <Name>AbsolutePosition</Name>
@@ -654,7 +677,7 @@
                         </Expression>
                         <Expression xsi:type="LessThan">
                           <Operand xsi:type="FloatProperty">
-                            <Value>13</Value>
+                            <Value>14</Value>
                           </Operand>
                         </Expression>
                         <Expression xsi:type="WorkflowOutput" />
@@ -716,24 +739,30 @@
                   <Edge From="5" To="6" Label="Source1" />
                   <Edge From="6" To="7" Label="Source1" />
                   <Edge From="7" To="8" Label="Source1" />
-                  <Edge From="9" To="10" Label="Source1" />
-                  <Edge From="10" To="11" Label="Source1" />
+                  <Edge From="8" To="14" Label="Source1" />
+                  <Edge From="9" To="11" Label="Source1" />
+                  <Edge From="10" To="11" Label="Source2" />
                   <Edge From="11" To="12" Label="Source1" />
                   <Edge From="12" To="13" Label="Source1" />
-                  <Edge From="13" To="14" Label="Source1" />
-                  <Edge From="14" To="15" Label="Source1" />
+                  <Edge From="13" To="14" Label="Source2" />
                   <Edge From="15" To="16" Label="Source1" />
                   <Edge From="16" To="17" Label="Source1" />
                   <Edge From="17" To="18" Label="Source1" />
                   <Edge From="18" To="19" Label="Source1" />
                   <Edge From="19" To="20" Label="Source1" />
                   <Edge From="20" To="21" Label="Source1" />
-                  <Edge From="22" To="24" Label="Source2" />
+                  <Edge From="21" To="22" Label="Source1" />
+                  <Edge From="22" To="23" Label="Source1" />
                   <Edge From="23" To="24" Label="Source1" />
                   <Edge From="24" To="25" Label="Source1" />
+                  <Edge From="25" To="26" Label="Source1" />
                   <Edge From="26" To="27" Label="Source1" />
-                  <Edge From="27" To="28" Label="Source1" />
-                  <Edge From="28" To="29" Label="Source1" />
+                  <Edge From="28" To="30" Label="Source2" />
+                  <Edge From="29" To="30" Label="Source1" />
+                  <Edge From="30" To="31" Label="Source1" />
+                  <Edge From="32" To="33" Label="Source1" />
+                  <Edge From="33" To="34" Label="Source1" />
+                  <Edge From="34" To="35" Label="Source1" />
                 </Edges>
               </Workflow>
             </Expression>
@@ -1004,7 +1033,7 @@
                     <Angle>0</Angle>
                     <SpatialFrequency>0.05</SpatialFrequency>
                     <TemporalFrequency>0</TemporalFrequency>
-                    <Phase>-46406.4648</Phase>
+                    <Phase>-6501.87256</Phase>
                     <SquareWave>false</SquareWave>
                     <Contrast>1</Contrast>
                     <Radius>1</Radius>
@@ -1042,7 +1071,7 @@
                     </PropertyMappings>
                   </Expression>
                   <Expression xsi:type="io:CsvWriter">
-                    <io:FileName>D:\wheel_train\zayin_test_21-10-2020\trial_type.csv</io:FileName>
+                    <io:FileName>D:\Behavior_data_wheeled_task\\TEST\18-12-2020\trial_type.csv</io:FileName>
                     <io:Append>true</io:Append>
                     <io:Overwrite>true</io:Overwrite>
                     <io:Suffix>None</io:Suffix>
@@ -1062,6 +1091,29 @@
                   </Expression>
                   <Expression xsi:type="BehaviorSubject">
                     <Name>Cue Distance</Name>
+                  </Expression>
+                  <Expression xsi:type="SubscribeSubject">
+                    <Name>Prefix</Name>
+                  </Expression>
+                  <Expression xsi:type="Combinator">
+                    <Combinator xsi:type="StringProperty">
+                      <Value>cue_distance.csv</Value>
+                    </Combinator>
+                  </Expression>
+                  <Expression xsi:type="Combinator">
+                    <Combinator xsi:type="rx:Zip" />
+                  </Expression>
+                  <Expression xsi:type="Add" />
+                  <Expression xsi:type="PropertyMapping">
+                    <PropertyMappings>
+                      <Property Name="FileName" />
+                    </PropertyMappings>
+                  </Expression>
+                  <Expression xsi:type="io:CsvWriter">
+                    <io:Append>false</io:Append>
+                    <io:Overwrite>false</io:Overwrite>
+                    <io:Suffix>None</io:Suffix>
+                    <io:IncludeHeader>false</io:IncludeHeader>
                   </Expression>
                   <Expression xsi:type="SubscribeSubject">
                     <Name>AbsolutePosition</Name>
@@ -1196,18 +1248,24 @@
                   <Edge From="38" To="39" Label="Source1" />
                   <Edge From="39" To="40" Label="Source1" />
                   <Edge From="40" To="41" Label="Source1" />
-                  <Edge From="42" To="43" Label="Source1" />
-                  <Edge From="43" To="44" Label="Source1" />
+                  <Edge From="41" To="47" Label="Source1" />
+                  <Edge From="42" To="44" Label="Source1" />
+                  <Edge From="43" To="44" Label="Source2" />
                   <Edge From="44" To="45" Label="Source1" />
                   <Edge From="45" To="46" Label="Source1" />
-                  <Edge From="46" To="47" Label="Source1" />
-                  <Edge From="47" To="48" Label="Source1" />
+                  <Edge From="46" To="47" Label="Source2" />
                   <Edge From="48" To="49" Label="Source1" />
                   <Edge From="49" To="50" Label="Source1" />
                   <Edge From="50" To="51" Label="Source1" />
-                  <Edge From="52" To="54" Label="Source2" />
+                  <Edge From="51" To="52" Label="Source1" />
+                  <Edge From="52" To="53" Label="Source1" />
                   <Edge From="53" To="54" Label="Source1" />
                   <Edge From="54" To="55" Label="Source1" />
+                  <Edge From="55" To="56" Label="Source1" />
+                  <Edge From="56" To="57" Label="Source1" />
+                  <Edge From="58" To="60" Label="Source2" />
+                  <Edge From="59" To="60" Label="Source1" />
+                  <Edge From="60" To="61" Label="Source1" />
                 </Edges>
               </Workflow>
             </Expression>
@@ -1240,7 +1298,7 @@
                     <Angle>0</Angle>
                     <SpatialFrequency>0.05</SpatialFrequency>
                     <TemporalFrequency>0</TemporalFrequency>
-                    <Phase>-141465.1</Phase>
+                    <Phase>-11335.7764</Phase>
                     <SquareWave>false</SquareWave>
                     <Contrast>1</Contrast>
                     <Radius>1</Radius>
@@ -1271,7 +1329,7 @@
                     <Angle>0</Angle>
                     <SpatialFrequency>0.05</SpatialFrequency>
                     <TemporalFrequency>0</TemporalFrequency>
-                    <Phase>141465.1</Phase>
+                    <Phase>11335.7764</Phase>
                     <SquareWave>false</SquareWave>
                     <Contrast>1</Contrast>
                     <Radius>1</Radius>
@@ -1313,7 +1371,8 @@
                     </PropertyMappings>
                   </Expression>
                   <Expression xsi:type="io:CsvWriter">
-                    <io:Append>false</io:Append>
+                    <io:FileName>D:\Behavior_data_wheeled_task\\TEST\18-12-2020\delay_distance.csv</io:FileName>
+                    <io:Append>true</io:Append>
                     <io:Overwrite>false</io:Overwrite>
                     <io:Suffix>None</io:Suffix>
                     <io:IncludeHeader>false</io:IncludeHeader>
@@ -1407,7 +1466,7 @@
                         </Expression>
                         <Expression xsi:type="LessThan">
                           <Operand xsi:type="FloatProperty">
-                            <Value>13</Value>
+                            <Value>10</Value>
                           </Operand>
                         </Expression>
                         <Expression xsi:type="WorkflowOutput" />
@@ -1804,7 +1863,7 @@
                     <Angle>-45</Angle>
                     <SpatialFrequency>0.05</SpatialFrequency>
                     <TemporalFrequency>0</TemporalFrequency>
-                    <Phase>-142213.672</Phase>
+                    <Phase>-15338.8643</Phase>
                     <SquareWave>false</SquareWave>
                     <Contrast>1</Contrast>
                     <Radius>1</Radius>
@@ -1833,7 +1892,7 @@
                     <Angle>0</Angle>
                     <SpatialFrequency>0.05</SpatialFrequency>
                     <TemporalFrequency>0</TemporalFrequency>
-                    <Phase>142213.672</Phase>
+                    <Phase>15338.8643</Phase>
                     <SquareWave>false</SquareWave>
                     <Contrast>1</Contrast>
                     <Radius>1</Radius>
@@ -1865,6 +1924,29 @@
                   </Expression>
                   <Expression xsi:type="BehaviorSubject">
                     <Name>Test Distance</Name>
+                  </Expression>
+                  <Expression xsi:type="SubscribeSubject">
+                    <Name>Prefix</Name>
+                  </Expression>
+                  <Expression xsi:type="Combinator">
+                    <Combinator xsi:type="StringProperty">
+                      <Value>test_distance.csv</Value>
+                    </Combinator>
+                  </Expression>
+                  <Expression xsi:type="Combinator">
+                    <Combinator xsi:type="rx:Zip" />
+                  </Expression>
+                  <Expression xsi:type="Add" />
+                  <Expression xsi:type="PropertyMapping">
+                    <PropertyMappings>
+                      <Property Name="FileName" />
+                    </PropertyMappings>
+                  </Expression>
+                  <Expression xsi:type="io:CsvWriter">
+                    <io:Append>false</io:Append>
+                    <io:Overwrite>false</io:Overwrite>
+                    <io:Suffix>None</io:Suffix>
+                    <io:IncludeHeader>false</io:IncludeHeader>
                   </Expression>
                   <Expression xsi:type="SubscribeSubject">
                     <Name>AbsolutePosition</Name>
@@ -1916,7 +1998,7 @@
                         </Expression>
                         <Expression xsi:type="LessThan">
                           <Operand xsi:type="FloatProperty">
-                            <Value>15</Value>
+                            <Value>16</Value>
                           </Operand>
                         </Expression>
                         <Expression xsi:type="WorkflowOutput" />
@@ -2251,7 +2333,7 @@
                     </PropertyMappings>
                   </Expression>
                   <Expression xsi:type="io:CsvWriter">
-                    <io:FileName>D:\wheel_train\zayin_test_21-10-2020\testresult.csv</io:FileName>
+                    <io:FileName>D:\Behavior_data_wheeled_task\\TEST\18-12-2020\testresult.csv</io:FileName>
                     <io:Append>true</io:Append>
                     <io:Overwrite>false</io:Overwrite>
                     <io:Suffix>None</io:Suffix>
@@ -2372,30 +2454,36 @@
                   <Edge From="37" To="38" Label="Source1" />
                   <Edge From="38" To="39" Label="Source1" />
                   <Edge From="39" To="40" Label="Source1" />
-                  <Edge From="41" To="42" Label="Source1" />
-                  <Edge From="42" To="43" Label="Source1" />
+                  <Edge From="40" To="46" Label="Source1" />
+                  <Edge From="41" To="43" Label="Source1" />
+                  <Edge From="42" To="43" Label="Source2" />
                   <Edge From="43" To="44" Label="Source1" />
                   <Edge From="44" To="45" Label="Source1" />
-                  <Edge From="45" To="46" Label="Source1" />
-                  <Edge From="46" To="47" Label="Source1" />
-                  <Edge From="46" To="58" Label="Source1" />
+                  <Edge From="45" To="46" Label="Source2" />
                   <Edge From="47" To="48" Label="Source1" />
                   <Edge From="48" To="49" Label="Source1" />
                   <Edge From="49" To="50" Label="Source1" />
-                  <Edge From="49" To="57" Label="Source1" />
-                  <Edge From="50" To="56" Label="Source1" />
-                  <Edge From="51" To="53" Label="Source1" />
-                  <Edge From="52" To="53" Label="Source2" />
+                  <Edge From="50" To="51" Label="Source1" />
+                  <Edge From="51" To="52" Label="Source1" />
+                  <Edge From="52" To="53" Label="Source1" />
+                  <Edge From="52" To="64" Label="Source1" />
                   <Edge From="53" To="54" Label="Source1" />
                   <Edge From="54" To="55" Label="Source1" />
-                  <Edge From="55" To="56" Label="Source2" />
-                  <Edge From="58" To="59" Label="Source1" />
+                  <Edge From="55" To="56" Label="Source1" />
+                  <Edge From="55" To="63" Label="Source1" />
+                  <Edge From="56" To="62" Label="Source1" />
+                  <Edge From="57" To="59" Label="Source1" />
+                  <Edge From="58" To="59" Label="Source2" />
                   <Edge From="59" To="60" Label="Source1" />
                   <Edge From="60" To="61" Label="Source1" />
-                  <Edge From="61" To="62" Label="Source1" />
-                  <Edge From="63" To="65" Label="Source2" />
+                  <Edge From="61" To="62" Label="Source2" />
                   <Edge From="64" To="65" Label="Source1" />
                   <Edge From="65" To="66" Label="Source1" />
+                  <Edge From="66" To="67" Label="Source1" />
+                  <Edge From="67" To="68" Label="Source1" />
+                  <Edge From="69" To="71" Label="Source2" />
+                  <Edge From="70" To="71" Label="Source1" />
+                  <Edge From="71" To="72" Label="Source1" />
                 </Edges>
               </Workflow>
             </Expression>
@@ -2498,7 +2586,7 @@
               </PropertyMappings>
             </Expression>
             <Expression xsi:type="io:CsvWriter">
-              <io:FileName>D:\wheel_train\zayin_test_21-10-2020\ptgrey.csv</io:FileName>
+              <io:FileName>D:\Behavior_data_wheeled_task\\TEST\18-12-2020\ptgrey.csv</io:FileName>
               <io:Append>false</io:Append>
               <io:Overwrite>true</io:Overwrite>
               <io:Suffix>None</io:Suffix>
@@ -2554,7 +2642,7 @@
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="cv:VideoWriter">
-                <cv:FileName>D:\wheel_train\zayin_test_21-10-2020\eye.avi</cv:FileName>
+                <cv:FileName>D:\Behavior_data_wheeled_task\\TEST\18-12-2020\eye.avi</cv:FileName>
                 <cv:Suffix>None</cv:Suffix>
                 <cv:Buffered>true</cv:Buffered>
                 <cv:Overwrite>true</cv:Overwrite>
@@ -2579,7 +2667,7 @@
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="cv:VideoWriter">
-                <cv:FileName>D:\wheel_train\zayin_test_21-10-2020\lick.avi</cv:FileName>
+                <cv:FileName>D:\Behavior_data_wheeled_task\\TEST\18-12-2020\lick.avi</cv:FileName>
                 <cv:Suffix>None</cv:Suffix>
                 <cv:Buffered>true</cv:Buffered>
                 <cv:Overwrite>true</cv:Overwrite>
@@ -2666,7 +2754,7 @@
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="cv:VideoWriter">
-                <cv:FileName>D:\wheel_train\zayin_test_21-10-2020\full.avi</cv:FileName>
+                <cv:FileName>D:\Behavior_data_wheeled_task\\TEST\18-12-2020\full.avi</cv:FileName>
                 <cv:Suffix>None</cv:Suffix>
                 <cv:Buffered>true</cv:Buffered>
                 <cv:Overwrite>true</cv:Overwrite>
@@ -2722,7 +2810,7 @@
               </PropertyMappings>
             </Expression>
             <Expression xsi:type="io:CsvWriter">
-              <io:FileName>D:\wheel_train\zayin_test_21-10-2020\roi.csv</io:FileName>
+              <io:FileName>D:\Behavior_data_wheeled_task\\TEST\18-12-2020\roi.csv</io:FileName>
               <io:Append>false</io:Append>
               <io:Overwrite>true</io:Overwrite>
               <io:Suffix>None</io:Suffix>
@@ -3069,7 +3157,7 @@
               </PropertyMappings>
             </Expression>
             <Expression xsi:type="io:CsvWriter">
-              <io:FileName>D:\wheel_train\zayin_test_21-10-2020\response.csv</io:FileName>
+              <io:FileName>D:\Behavior_data_wheeled_task\\TEST\18-12-2020\response.csv</io:FileName>
               <io:Append>true</io:Append>
               <io:Overwrite>false</io:Overwrite>
               <io:Suffix>None</io:Suffix>
@@ -3174,7 +3262,7 @@
       </Expression>
       <Expression xsi:type="Combinator">
         <Combinator xsi:type="StringProperty">
-          <Value>RM_01\</Value>
+          <Value>TEST\</Value>
         </Combinator>
       </Expression>
       <Expression xsi:type="BehaviorSubject">
@@ -3227,7 +3315,7 @@
         </PropertyMappings>
       </Expression>
       <Expression xsi:type="io:CsvWriter">
-        <io:FileName>D:\wheel_train\zayin_test_21-10-2020\\mouse_name.csv</io:FileName>
+        <io:FileName>D:\Behavior_data_wheeled_task\\TEST\18-12-2020\\mouse_name.csv</io:FileName>
         <io:Append>false</io:Append>
         <io:Overwrite>false</io:Overwrite>
         <io:Suffix>None</io:Suffix>
@@ -3269,6 +3357,7 @@
         </Combinator>
       </Expression>
       <Expression xsi:type="io:CsvWriter">
+        <io:FileName>D:\Behavior_data_wheeled_task\\TEST\18-12-2020\task_type.csv</io:FileName>
         <io:Append>false</io:Append>
         <io:Overwrite>false</io:Overwrite>
         <io:Suffix>None</io:Suffix>
