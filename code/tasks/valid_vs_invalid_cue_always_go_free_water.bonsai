@@ -191,7 +191,7 @@
               </Combinator>
             </Expression>
             <Expression xsi:type="io:CsvWriter">
-              <io:FileName>D:\Behavior_data_wheeled_task\TEST\27-11-2020\raw_encoder_signal.csv</io:FileName>
+              <io:FileName>D:\Behavior_data_wheeled_task\RM_04\16-12-2020\raw_encoder_signal.csv</io:FileName>
               <io:Append>true</io:Append>
               <io:Overwrite>true</io:Overwrite>
               <io:Suffix>None</io:Suffix>
@@ -219,7 +219,7 @@
               <Combinator xsi:type="rx:WithLatestFrom" />
             </Expression>
             <Expression xsi:type="io:CsvWriter">
-              <io:FileName>D:\Behavior_data_wheeled_task\TEST\27-11-2020\wheel_hi_res.csv</io:FileName>
+              <io:FileName>D:\Behavior_data_wheeled_task\RM_04\16-12-2020\wheel_hi_res.csv</io:FileName>
               <io:Append>true</io:Append>
               <io:Overwrite>true</io:Overwrite>
               <io:Suffix>None</io:Suffix>
@@ -375,7 +375,7 @@
               </Combinator>
             </Expression>
             <Expression xsi:type="io:CsvWriter">
-              <io:FileName>D:\Behavior_data_wheeled_task\TEST\27-11-2020\abspos.csv</io:FileName>
+              <io:FileName>D:\Behavior_data_wheeled_task\RM_04\16-12-2020\abspos.csv</io:FileName>
               <io:Append>true</io:Append>
               <io:Overwrite>true</io:Overwrite>
               <io:Suffix>None</io:Suffix>
@@ -429,7 +429,7 @@
               <Combinator xsi:type="rx:CombineLatest" />
             </Expression>
             <Expression xsi:type="io:CsvWriter">
-              <io:FileName>D:\Behavior_data_wheeled_task\TEST\27-11-2020\epochlicktimestamp.csv</io:FileName>
+              <io:FileName>D:\Behavior_data_wheeled_task\RM_04\16-12-2020\epochlicktimestamp.csv</io:FileName>
               <io:Append>true</io:Append>
               <io:Overwrite>false</io:Overwrite>
               <io:Suffix>None</io:Suffix>
@@ -617,7 +617,7 @@
                     <Angle>0</Angle>
                     <SpatialFrequency>0.05</SpatialFrequency>
                     <TemporalFrequency>0</TemporalFrequency>
-                    <Phase>-345170.969</Phase>
+                    <Phase>-571239.75</Phase>
                     <SquareWave>false</SquareWave>
                     <Contrast>1</Contrast>
                     <Radius>1</Radius>
@@ -631,8 +631,8 @@
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="p4:CreateDiscreteUniform">
-                      <p4:Lower>75</p4:Lower>
-                      <p4:Upper>85</p4:Upper>
+                      <p4:Lower>8</p4:Lower>
+                      <p4:Upper>12</p4:Upper>
                     </Combinator>
                   </Expression>
                   <Expression xsi:type="Combinator">
@@ -646,7 +646,7 @@
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="StringProperty">
-                      <Value>iti_distance</Value>
+                      <Value>iti_distance.csv</Value>
                     </Combinator>
                   </Expression>
                   <Expression xsi:type="Combinator">
@@ -659,7 +659,7 @@
                     </PropertyMappings>
                   </Expression>
                   <Expression xsi:type="io:CsvWriter">
-                    <io:FileName>D:\Behavior_data_wheeled_task\TEST\27-11-2020\iti_distance</io:FileName>
+                    <io:FileName>D:\Behavior_data_wheeled_task\RM_04\16-12-2020\iti_distance.csv</io:FileName>
                     <io:Append>true</io:Append>
                     <io:Overwrite>false</io:Overwrite>
                     <io:Suffix>None</io:Suffix>
@@ -715,7 +715,7 @@
                         </Expression>
                         <Expression xsi:type="LessThan">
                           <Operand xsi:type="FloatProperty">
-                            <Value>82</Value>
+                            <Value>13</Value>
                           </Operand>
                         </Expression>
                         <Expression xsi:type="WorkflowOutput" />
@@ -1066,7 +1066,7 @@
                   </Expression>
                   <Expression xsi:type="Multiply">
                     <Operand xsi:type="DoubleProperty">
-                      <Value>1</Value>
+                      <Value>-1</Value>
                     </Operand>
                   </Expression>
                   <Expression xsi:type="PropertyMapping">
@@ -1088,12 +1088,12 @@
                     </PropertyMappings>
                   </Expression>
                   <Expression xsi:type="IncludeWorkflow" Path="BonVision:Primitives.DrawGratings.bonsai">
-                    <LocationX>120</LocationX>
+                    <LocationX>-120</LocationX>
                     <LocationY>0</LocationY>
                     <Angle>0</Angle>
                     <SpatialFrequency>0.05</SpatialFrequency>
                     <TemporalFrequency>0</TemporalFrequency>
-                    <Phase>93731.42</Phase>
+                    <Phase>-191110.844</Phase>
                     <SquareWave>false</SquareWave>
                     <Contrast>1</Contrast>
                     <Radius>1</Radius>
@@ -1131,7 +1131,7 @@
                     </PropertyMappings>
                   </Expression>
                   <Expression xsi:type="io:CsvWriter">
-                    <io:FileName>D:\Behavior_data_wheeled_task\TEST\27-11-2020\trial_type.csv</io:FileName>
+                    <io:FileName>D:\Behavior_data_wheeled_task\RM_04\16-12-2020\trial_type.csv</io:FileName>
                     <io:Append>true</io:Append>
                     <io:Overwrite>true</io:Overwrite>
                     <io:Suffix>None</io:Suffix>
@@ -1142,8 +1142,8 @@
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="p4:CreateDiscreteUniform">
-                      <p4:Lower>20</p4:Lower>
-                      <p4:Upper>25</p4:Upper>
+                      <p4:Lower>10</p4:Lower>
+                      <p4:Upper>15</p4:Upper>
                     </Combinator>
                   </Expression>
                   <Expression xsi:type="Combinator">
@@ -1157,7 +1157,7 @@
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="StringProperty">
-                      <Value>cue_distance</Value>
+                      <Value>cue_distance.csv</Value>
                     </Combinator>
                   </Expression>
                   <Expression xsi:type="Combinator">
@@ -1170,7 +1170,7 @@
                     </PropertyMappings>
                   </Expression>
                   <Expression xsi:type="io:CsvWriter">
-                    <io:FileName>D:\Behavior_data_wheeled_task\TEST\27-11-2020\cue_distance</io:FileName>
+                    <io:FileName>D:\Behavior_data_wheeled_task\RM_04\16-12-2020\cue_distance.csv</io:FileName>
                     <io:Append>true</io:Append>
                     <io:Overwrite>false</io:Overwrite>
                     <io:Suffix>None</io:Suffix>
@@ -1226,7 +1226,7 @@
                         </Expression>
                         <Expression xsi:type="LessThan">
                           <Operand xsi:type="FloatProperty">
-                            <Value>15</Value>
+                            <Value>20</Value>
                           </Operand>
                         </Expression>
                         <Expression xsi:type="WorkflowOutput" />
@@ -1359,7 +1359,7 @@
                     <Angle>0</Angle>
                     <SpatialFrequency>0.05</SpatialFrequency>
                     <TemporalFrequency>0</TemporalFrequency>
-                    <Phase>-113787.016</Phase>
+                    <Phase>-188338.391</Phase>
                     <SquareWave>false</SquareWave>
                     <Contrast>1</Contrast>
                     <Radius>1</Radius>
@@ -1390,7 +1390,7 @@
                     <Angle>0</Angle>
                     <SpatialFrequency>0.05</SpatialFrequency>
                     <TemporalFrequency>0</TemporalFrequency>
-                    <Phase>113788.805</Phase>
+                    <Phase>188338.391</Phase>
                     <SquareWave>false</SquareWave>
                     <Contrast>1</Contrast>
                     <Radius>1</Radius>
@@ -1404,8 +1404,8 @@
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="p4:CreateDiscreteUniform">
-                      <p4:Lower>20</p4:Lower>
-                      <p4:Upper>25</p4:Upper>
+                      <p4:Lower>10</p4:Lower>
+                      <p4:Upper>15</p4:Upper>
                     </Combinator>
                   </Expression>
                   <Expression xsi:type="Combinator">
@@ -1422,7 +1422,7 @@
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="StringProperty">
-                      <Value>delay_distance</Value>
+                      <Value>delay_distance.csv</Value>
                     </Combinator>
                   </Expression>
                   <Expression xsi:type="Combinator">
@@ -1435,7 +1435,7 @@
                     </PropertyMappings>
                   </Expression>
                   <Expression xsi:type="io:CsvWriter">
-                    <io:FileName>D:\Behavior_data_wheeled_task\TEST\27-11-2020\delay_distance</io:FileName>
+                    <io:FileName>D:\Behavior_data_wheeled_task\RM_04\16-12-2020\delay_distance.csv</io:FileName>
                     <io:Append>true</io:Append>
                     <io:Overwrite>false</io:Overwrite>
                     <io:Suffix>None</io:Suffix>
@@ -1530,7 +1530,7 @@
                         </Expression>
                         <Expression xsi:type="LessThan">
                           <Operand xsi:type="FloatProperty">
-                            <Value>14</Value>
+                            <Value>20</Value>
                           </Operand>
                         </Expression>
                         <Expression xsi:type="WorkflowOutput" />
@@ -1925,10 +1925,10 @@
                   <Expression xsi:type="IncludeWorkflow" Path="BonVision:Primitives.DrawGratings.bonsai">
                     <LocationX>-120</LocationX>
                     <LocationY>0</LocationY>
-                    <Angle>0</Angle>
+                    <Angle>-45</Angle>
                     <SpatialFrequency>0.05</SpatialFrequency>
                     <TemporalFrequency>0</TemporalFrequency>
-                    <Phase>-114550.781</Phase>
+                    <Phase>-189663.8</Phase>
                     <SquareWave>false</SquareWave>
                     <Contrast>1</Contrast>
                     <Radius>1</Radius>
@@ -1954,10 +1954,10 @@
                   <Expression xsi:type="IncludeWorkflow" Path="BonVision:Primitives.DrawGratings.bonsai">
                     <LocationX>120</LocationX>
                     <LocationY>0</LocationY>
-                    <Angle>45</Angle>
+                    <Angle>0</Angle>
                     <SpatialFrequency>0.05</SpatialFrequency>
                     <TemporalFrequency>0</TemporalFrequency>
-                    <Phase>114551.68</Phase>
+                    <Phase>189663.8</Phase>
                     <SquareWave>false</SquareWave>
                     <Contrast>1</Contrast>
                     <Radius>1</Radius>
@@ -1986,7 +1986,7 @@
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="StringProperty">
-                      <Value>test_distance</Value>
+                      <Value>test_distance.csv</Value>
                     </Combinator>
                   </Expression>
                   <Expression xsi:type="Combinator">
@@ -1999,7 +1999,7 @@
                     </PropertyMappings>
                   </Expression>
                   <Expression xsi:type="io:CsvWriter">
-                    <io:FileName>D:\Behavior_data_wheeled_task\TEST\27-11-2020\test_distance</io:FileName>
+                    <io:FileName>D:\Behavior_data_wheeled_task\RM_04\16-12-2020\test_distance.csv</io:FileName>
                     <io:Append>true</io:Append>
                     <io:Overwrite>false</io:Overwrite>
                     <io:Suffix>None</io:Suffix>
@@ -2055,7 +2055,7 @@
                         </Expression>
                         <Expression xsi:type="LessThan">
                           <Operand xsi:type="FloatProperty">
-                            <Value>13</Value>
+                            <Value>23</Value>
                           </Operand>
                         </Expression>
                         <Expression xsi:type="WorkflowOutput" />
@@ -2156,7 +2156,7 @@
                               </Expression>
                               <Expression xsi:type="Combinator">
                                 <Combinator xsi:type="rx:Delay">
-                                  <rx:DueTime>PT0.5S</rx:DueTime>
+                                  <rx:DueTime>PT0.65S</rx:DueTime>
                                 </Combinator>
                               </Expression>
                               <Expression xsi:type="p3:BehaviorCommand">
@@ -2395,7 +2395,7 @@
                     </PropertyMappings>
                   </Expression>
                   <Expression xsi:type="io:CsvWriter">
-                    <io:FileName>D:\Behavior_data_wheeled_task\TEST\27-11-2020\testresult.csv</io:FileName>
+                    <io:FileName>D:\Behavior_data_wheeled_task\RM_04\16-12-2020\testresult.csv</io:FileName>
                     <io:Append>true</io:Append>
                     <io:Overwrite>false</io:Overwrite>
                     <io:Suffix>None</io:Suffix>
@@ -2563,7 +2563,7 @@
               </PropertyMappings>
             </Expression>
             <Expression xsi:type="io:CsvWriter">
-              <io:FileName>D:\Behavior_data_wheeled_task\TEST\27-11-2020\ptgrey.csv</io:FileName>
+              <io:FileName>D:\Behavior_data_wheeled_task\RM_04\16-12-2020\ptgrey.csv</io:FileName>
               <io:Append>false</io:Append>
               <io:Overwrite>true</io:Overwrite>
               <io:Suffix>None</io:Suffix>
@@ -2619,7 +2619,7 @@
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="cv:VideoWriter">
-                <cv:FileName>D:\Behavior_data_wheeled_task\TEST\27-11-2020\eye.avi</cv:FileName>
+                <cv:FileName>D:\Behavior_data_wheeled_task\RM_04\16-12-2020\eye.avi</cv:FileName>
                 <cv:Suffix>None</cv:Suffix>
                 <cv:Buffered>true</cv:Buffered>
                 <cv:Overwrite>true</cv:Overwrite>
@@ -2635,16 +2635,16 @@
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="cv:Crop">
                 <cv:RegionOfInterest>
-                  <cv:X>305</cv:X>
-                  <cv:Y>182</cv:Y>
-                  <cv:Width>15</cv:Width>
-                  <cv:Height>16</cv:Height>
+                  <cv:X>299</cv:X>
+                  <cv:Y>174</cv:Y>
+                  <cv:Width>17</cv:Width>
+                  <cv:Height>17</cv:Height>
                 </cv:RegionOfInterest>
               </Combinator>
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="cv:VideoWriter">
-                <cv:FileName>D:\Behavior_data_wheeled_task\TEST\27-11-2020\lick.avi</cv:FileName>
+                <cv:FileName>D:\Behavior_data_wheeled_task\RM_04\16-12-2020\lick.avi</cv:FileName>
                 <cv:Suffix>None</cv:Suffix>
                 <cv:Buffered>true</cv:Buffered>
                 <cv:Overwrite>true</cv:Overwrite>
@@ -2674,7 +2674,7 @@
             </Expression>
             <Expression xsi:type="GreaterThan">
               <Operand xsi:type="DoubleProperty">
-                <Value>44000</Value>
+                <Value>72500</Value>
               </Operand>
             </Expression>
             <Expression xsi:type="Disable">
@@ -2788,7 +2788,7 @@
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="cv:VideoWriter">
-                <cv:FileName>D:\Behavior_data_wheeled_task\TEST\27-11-2020\full.avi</cv:FileName>
+                <cv:FileName>D:\Behavior_data_wheeled_task\RM_04\16-12-2020\full.avi</cv:FileName>
                 <cv:Suffix>None</cv:Suffix>
                 <cv:Buffered>true</cv:Buffered>
                 <cv:Overwrite>true</cv:Overwrite>
@@ -2803,7 +2803,7 @@
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="DoubleProperty">
-                <Value>44000</Value>
+                <Value>72000</Value>
               </Combinator>
             </Expression>
             <Expression xsi:type="PublishSubject">
@@ -2827,7 +2827,7 @@
               </PropertyMappings>
             </Expression>
             <Expression xsi:type="io:CsvWriter">
-              <io:FileName>D:\Behavior_data_wheeled_task\TEST\27-11-2020\roi.csv</io:FileName>
+              <io:FileName>D:\Behavior_data_wheeled_task\RM_04\16-12-2020\roi.csv</io:FileName>
               <io:Append>false</io:Append>
               <io:Overwrite>true</io:Overwrite>
               <io:Suffix>None</io:Suffix>
@@ -3174,7 +3174,7 @@
               </PropertyMappings>
             </Expression>
             <Expression xsi:type="io:CsvWriter">
-              <io:FileName>D:\Behavior_data_wheeled_task\TEST\27-11-2020\response.csv</io:FileName>
+              <io:FileName>D:\Behavior_data_wheeled_task\RM_04\16-12-2020\response.csv</io:FileName>
               <io:Append>true</io:Append>
               <io:Overwrite>false</io:Overwrite>
               <io:Suffix>None</io:Suffix>
@@ -3205,7 +3205,7 @@
               </PropertyMappings>
             </Expression>
             <Expression xsi:type="io:CsvWriter">
-              <io:FileName>D:\Behavior_data_wheeled_task\TEST\27-11-2020\performance.csv</io:FileName>
+              <io:FileName>D:\Behavior_data_wheeled_task\RM_04\16-12-2020\performance.csv</io:FileName>
               <io:Append>false</io:Append>
               <io:Overwrite>false</io:Overwrite>
               <io:Suffix>None</io:Suffix>
@@ -3304,7 +3304,7 @@
       </Expression>
       <Expression xsi:type="Combinator">
         <Combinator xsi:type="StringProperty">
-          <Value>TEST\</Value>
+          <Value>RM_05\</Value>
         </Combinator>
       </Expression>
       <Expression xsi:type="BehaviorSubject">
@@ -3312,7 +3312,7 @@
       </Expression>
       <Expression xsi:type="Combinator">
         <Combinator xsi:type="StringProperty">
-          <Value>27-11-2020</Value>
+          <Value>16-12-2020</Value>
         </Combinator>
       </Expression>
       <Expression xsi:type="BehaviorSubject">
@@ -3357,7 +3357,7 @@
         </PropertyMappings>
       </Expression>
       <Expression xsi:type="io:CsvWriter">
-        <io:FileName>D:\Behavior_data_wheeled_task\TEST\27-11-2020\\mouse_name.csv</io:FileName>
+        <io:FileName>D:\Behavior_data_wheeled_task\RM_04\16-12-2020\\mouse_name.csv</io:FileName>
         <io:Append>false</io:Append>
         <io:Overwrite>false</io:Overwrite>
         <io:Suffix>None</io:Suffix>
@@ -3399,7 +3399,7 @@
         </Combinator>
       </Expression>
       <Expression xsi:type="io:CsvWriter">
-        <io:FileName>D:\Behavior_data_wheeled_task\TEST\27-11-2020\task_type.csv</io:FileName>
+        <io:FileName>D:\Behavior_data_wheeled_task\RM_04\16-12-2020\task_type.csv</io:FileName>
         <io:Append>false</io:Append>
         <io:Overwrite>false</io:Overwrite>
         <io:Suffix>None</io:Suffix>
