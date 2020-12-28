@@ -24,10 +24,8 @@ body{
 #header{
 	margin: 15px;
 	margin-right: 0px;
-	font-size: 30px;
+	font-size: 15px;
 }
-
-
 
 .nav-link{
 	text-decoration: none;
@@ -61,7 +59,6 @@ body{
 		width: 100%;
 	}
 }
-
 
 .col-lg-9{
 	padding-top: 10px;
@@ -105,19 +102,4 @@ li{
 	font-size: 15px;
 	text-overflow: none;
 	color: rgba(0,0,0,0.7);
-}
-
-code{
-	display: block;
-	color: black;
-    white-space: pre;
-    word-break: normal;
-    word-wrap: normal;
-    line-height: 2;
-    background-color: #f7f7f7;
-    border-radius: 5px;
-    margin: 15px;
-    margin-left: 35px;
-    padding: 5px;
-    padding-left: 20px;
 }
