@@ -12,13 +12,13 @@ body{
 }
 
 .col-lg-3{
-	padding-left: 15px;
+	padding-left:25px;
 	margin-left: 0;
 }
 
 #navbar{
 	margin: 0;
-	padding: 0;
+	padding: 15px;
 }
 
 #header{
