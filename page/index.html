@@ -19,12 +19,13 @@
 		<a href="#IR_light">IR light</a>
 		<a href="#bonsai">Bonsai</a>
 		<a href="#workflow">Workflow</a>
+		<a href="#variables">Variables and settings</a>
 		<a href="#signal_settings">Signal settings</a>
 		<a href="#screen_settings">Screen settings</a>
 		<a href="#stimuli_settings">Stimuli settings</a>
 		<a href="#camera_settings">Camera settings</a>
 		<a href="#trial_results">Trial results</a>
-		<a href="#final_considerations">Final considerations</a>
+		<a href="#procedure">Typical procedure for an experiment</a>
 	  </div> 
 
 	<div class="col-lg-9">
@@ -69,32 +70,52 @@
 			<section class="main-section">
 				<header id="workflow">Workflow</header>
 				<p>Workflow contains the several components of the code that controls the hardware and acquires the data. Next, details of each main section are described.</p>
-						
+				<img src="workflow.png" alt="workflow">
+			</section>
+			<section class="main-section">
+				<header id="variables">Variables</header>
+				<p>In the variables and settings workflow, all the main variables of the task are declared, such as the number of total trials and the epoch (0 (iti),1 (cue), 2 (delay), 3 (test)) </p>
+				<img src="variables.png" alt="workflow">
 			</section>
 			<section class="main-section">
 				<header id="signal_settings">Signal settings</header>
 				<p>In signal settings, the signal coming from the encoder is processed and integrated in the visual stimuli. The raw signal of the encoder oscilates between 0 and 5V. Here, these values are converted between 0 and 60cm (full wheel perimeter) and absolute distance covered by the mouse.</p>
+				<img src="signalsettings.png" alt="workflow">
 			</section>
 			<section class="main-section">
 				<header id="screen_settings">Screen settings</header>
                 <p>In screen settings, all things related to the screen are configured. The frames and timestamped and registed with HarpBehavior.</p>                
 			</section>
+			<img src="screensettings.png" alt="workflow">
 			<section class="main-section">
 				<header id="stimuli_series">Stimuli series</header>
 				<p>Stimuli series contains the epochs of the task and it's configurations. Here, you control the stimulus settings such as position, contrast and spatial frequency. You can also set the distance for each epoch, the cueing configuration (true or false cue) and reward delivery.</p>
 			</section>
+			<img src="stimuliseries.png" alt="workflow">
 			<section class="main-section">
 				<header id="camera_settings">Camera settings</header>
 				<p>In camera settings, the video recording is set and the lick detection is implemented. Also, a separate video is recorded for the mouse's pupil.</p>
 			</section>
+			<img src="workflow.png" alt="workflow">
 			<section class="main-section">
 				<header id="trial_results">Trial results</header>
 				<p>In Trial results, the data from the trial is processed and performance is calculated.</p>
             </section>	
-            <section class="main-section">
-				<header id="final_considerations">Typical set up for an experiment</header>
-				<p>Calibrate water valve with Valve Calibration workflow.</p>
-			</section>
+			<img src="trialresults.png" alt="workflow">
+			<section class="main-section">
+				<header id="procedure">Typical set up for an experiment</header>
+				<ol>
+					<li><p>Calibrate water valve with Valve Calibration workflow.</p></li>
+					<li><p>On Workflow, change the mouse name and the date of the session</p></li>
+					<li><p>Within stimuli series, check for the distances </p></li>
+					<li><p>Calibrate water valve with Valve Calibration workflow.</p></li>
+					<li><p>Calibrate water valve with Valve Calibration workflow.</p></li>
+					<li><p>Calibrate water valve with Valve Calibration workflow.</p></li>
+					<li><p>Calibrate water valve with Valve Calibration workflow.</p></li>
+					<li><p>Calibrate water valve with Valve Calibration workflow.</p></li>
+				</ol>
+
+				</section>
 		</main>
 	</div>
   </div>	
