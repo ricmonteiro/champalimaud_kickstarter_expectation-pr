@@ -30,33 +30,45 @@
 
 	<div class="col-lg-9">
 		<main id="main-doc">	
+			
+			
 			<section class="main-section">
 				<header id="Introduction">Introduction</header>
 				<p>This is the page with a detailed description of the rigs used in the mouse room to train mice in visual expectation tasks.</p>
 			</section>
+			
+			
 			<section class="main-section">
 				<header id="rig_schematics">Rig overall schematics</header>
 				<p>The general structure of the rig is presented in the figure. The mouse is in the center, on top of the wheel. 
 					In the front, a screen is centered on the mouse's snout, at aprox. 17cm from the mouse. 
 					There's a camera on the right with an infrared (IR) light above it. On the center of the wheel there is an analog encoder. Right in front of the mouse, a spout for reward delivery. </p>
 					<p>Outside the rig there is the Harp Behavior board, where the camera and the water valve connect.</p>
-				
+					<img src="schematic.png" alt="schematic">
 			</section>
+			
+			
 			<section class="main-section">
 				<header id="screen">Screen</header>
-				<p>The screen is a Adafruits 10.1" Display (HDMI 4 Pi - 10.1" Display 1280x800 IPS - HDMI/VGA/NTSC/PAL). It's connect the the computer's GPU.</p>
+				<p>The screen is a Adafruits 10.1" Display (HDMI 4 Pi - 10.1" Display 1280x800 IPS - HDMI/VGA/NTSC/PAL). It's connect the the computer's GPU. It duplicates the main screen so if you do something on the computer while running the task, it might affect what's presenting on the screen during the trial. So, it's better to don't use the computer while running a task.</p>
 			</section>
+			
+			
 			<section class="main-section">
 				<header id="wheel">Wheel</header>
 				<p>The wheel is an acrylic 3D-printed in-house. It's connected to an analog encoder
 					 (MAE3 Absolute Encoder, Analog 10-Bit, 6mm Bore, .500" Shaft Length, .750" Bolt Circle, Bulk Packaged)</p>
 				<p></p>
 			</section>
+			
+			
 			<section class="main-section">
 				<header id="camera">Camera</header>
-				<p>The camera (Chameleon3 USB, CM3-U3-13Y3C-S-BD) records videos and is used for lick detection. It's frame rate is controlled by the Harp Behavior board.</p>
+				<p>The camera (Chameleon3 USB, CM3-U3-13Y3C-S-BD) records videos and is used for lick detection. It's frame rate is controlled by the Harp Behavior board. You can change the settings of the camera using the FlyCap software (downloaded <a href="https://www.flir.com/support-center/iis/machine-vision/downloads/spinnaker-sdk-flycapture-and-firmware-download/">here</a>).</p>
 
 			</section>
+			
+			
 			<section class="main-section">
 				<header id="IR_light">IR Light</header>
 				<p>The IR Light serves to get a better image quality on Mono mode camera. Neither humans nor mice see the light coming from the lamp and it's used to be able to record video in a dark environment. It should be pointed directly to the mouse's snout.</p>
@@ -66,54 +78,88 @@
 			<section class="main-section">
 				<header id="bonsai">Bonsai</header>
 				<p>Bonsai is a reactive programing framework that allows hardware control and live data acquisition. It's design is intuitive and the framework was built by a CCU PhD student called Gonçalo Lopes.</p>
+				<p><a href="https://bonsai-rx.org/learn/">LEARN THE BONSAI BASICS HERE</a></p>
+				<p><a href="https://www.youtube.com/watch?v=8EARPV8va2E">TUTORIALS</a></p>
+				<p><a href="https://www.youtube.com/watch?v=srcqJXd6Vz4&t=8s">MORE TUTORIALS</a></p>
+				<p><a href="https://groups.google.com/g/bonsai-users?pli=1">BONSAI GOOGLE GROUP</a>. Great for posing questions and issues. The community is very responsive and helpful.</p>
 			</section>
+			
+			
 			<section class="main-section">
 				<header id="workflow">Workflow</header>
 				<p>Workflow contains the several components of the code that controls the hardware and acquires the data. Next, details of each main section are described.</p>
 				<img src="workflow.png" alt="workflow">
 			</section>
+			
+			
 			<section class="main-section">
 				<header id="variables">Variables</header>
 				<p>In the variables and settings workflow, all the main variables of the task are declared, such as the number of total trials and the epoch (0 (iti),1 (cue), 2 (delay), 3 (test)) </p>
-				<img src="variables.png" alt="workflow">
+				<img src="variables.png" alt="variables">
 			</section>
+			
+			
 			<section class="main-section">
 				<header id="signal_settings">Signal settings</header>
 				<p>In signal settings, the signal coming from the encoder is processed and integrated in the visual stimuli. The raw signal of the encoder oscilates between 0 and 5V. Here, these values are converted between 0 and 60cm (full wheel perimeter) and absolute distance covered by the mouse.</p>
-				<img src="signalsettings.png" alt="workflow">
+				<img src="signalsettings.png" alt="signals ettings">
 			</section>
+			
+			
 			<section class="main-section">
 				<header id="screen_settings">Screen settings</header>
                 <p>In screen settings, all things related to the screen are configured. The frames and timestamped and registed with HarpBehavior.</p>                
 			</section>
-			<img src="screensettings.png" alt="workflow">
+			<img src="screensettings.png" alt="screen settings">
+			
+			
 			<section class="main-section">
 				<header id="stimuli_series">Stimuli series</header>
 				<p>Stimuli series contains the epochs of the task and it's configurations. Here, you control the stimulus settings such as position, contrast and spatial frequency. You can also set the distance for each epoch, the cueing configuration (true or false cue) and reward delivery.</p>
 			</section>
-			<img src="stimuliseries.png" alt="workflow">
+			<img src="stimuliseries.png" alt="stimuli series">
+			
+			
 			<section class="main-section">
 				<header id="camera_settings">Camera settings</header>
 				<p>In camera settings, the video recording is set and the lick detection is implemented. Also, a separate video is recorded for the mouse's pupil.</p>
 			</section>
-			<img src="workflow.png" alt="workflow">
+			<img src="camera.png" alt="camera settings">
+			
+			
 			<section class="main-section">
 				<header id="trial_results">Trial results</header>
 				<p>In Trial results, the data from the trial is processed and performance is calculated.</p>
             </section>	
-			<img src="trialresults.png" alt="workflow">
+			<img src="trialresults.png" alt="trial results">
 			<section class="main-section">
+
+
+
 				<header id="procedure">Typical set up for an experiment</header>
 				<ol>
-					<li><p>Calibrate water valve with Valve Calibration workflow.</p></li>
-					<li><p>On Workflow, change the mouse name and the date of the session</p></li>
-					<li><p>Within stimuli series, check for the distances </p></li>
-					<li><p>Calibrate water valve with Valve Calibration workflow.</p></li>
-					<li><p>Calibrate water valve with Valve Calibration workflow.</p></li>
-					<li><p>Calibrate water valve with Valve Calibration workflow.</p></li>
-					<li><p>Calibrate water valve with Valve Calibration workflow.</p></li>
-					<li><p>Calibrate water valve with Valve Calibration workflow.</p></li>
-				</ol>
+					<li><p>Calibrate water valve by running the Valve Calibration workflow. When workflow finishes running, calculate the amount of water for each reward (should be around 3ul)</p></li>
+
+					<li><p>Choose the appropriate task code, depending on the stage of training the mice. The name of the file is suggestive of the type of task it is.</p></li>
+
+
+					<li><p>On Workflow seperator, change the mouse name and the date of the session.</p></li>
+					<img src="namedate.png" alt="set names and date">
+
+					<li><p>Within stimuli series, set the distances for each epoch within the node for each epoch. Set the upper and lower limit in the "Create Discrete" Uniform node before the Behavior Subject for each epoch.</p></li>
+					<img src="setdist.png" alt="set distances">
+
+					<li><p>Place the mouse inside the rig and start the trial.</p></li>
+					
+
+					<li><p>Check the ROI of the lick detection crop and adjust so that the tongue passes through the region and a lick is detected. You can also adjust the threshold for detection in the Threshold node below.</p></li>
+					<img src="lickcrop.png" alt="lick crop">
+
+					<li><p>After terminating the sessions, check within the mouse's name folder for the folder with the trials date to see all the data stored as csv and videos.</p></li>
+					<img src="folder.png" alt="folder">
+					
+
+					</ol>
 
 				</section>
 		</main>
